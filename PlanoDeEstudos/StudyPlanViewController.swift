@@ -33,7 +33,13 @@ class StudyPlanViewController: UIViewController {
         content.sound = UNNotificationSound(named: UNNotificationSoundName("notification.wav"))
         content.categoryIdentifier = "Lembrete"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+        let dateComponents = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute], from: dpDate.date)
+        
+        //Faz com que a notificação apareça em um intervalo de tempo.
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+        
+        //Faz com que o notificação apareça na hora marcada pelo usuario.
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request,withCompletionHandler: nil)
         

@@ -6,14 +6,38 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let center = UNUserNotificationCenter.current()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        center.delegate = self
+        center.getNotificationSettings { settings in
+            if settings.authorizationStatus == .notDetermined {
+                let options: UNAuthorizationOptions = [.alert,.sound,.badge,.carPlay]
+                self.center.requestAuthorization(options: options) { success, error in
+                    if error == nil {
+                        print(success)
+                    } else {
+                        print(error!.localizedDescription)
+                    }
+                }
+            } else if settings.authorizationStatus == .denied {
+                print("Usuario negou a Notificação")
+            }
+        }
+        
+        let confirmAction = UNNotificationAction(identifier: "Confirm", title: "Já Estudei", options: [.foreground])
+        let cancelAction = UNNotificationAction(identifier: "Cancel", title: "Cancelar", options: [])
+        let category = UNNotificationCategory(identifier: "Lembrete", actions: [confirmAction,cancelAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "", options: [.customDismissAction])
+        
+        center.setNotificationCategories([category])
+        
         return true
     }
 
@@ -34,3 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+}

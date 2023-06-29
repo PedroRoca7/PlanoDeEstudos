@@ -102,6 +102,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Cadastrar Plano de Estudo">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="schedule:" destination="APn-z5-JGS" eventType="touchUpInside" id="7EY-eo-HGS"/>
                                 </connections>

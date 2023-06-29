@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class StudyManager {
     static let shared = StudyManager()
@@ -30,7 +31,24 @@ class StudyManager {
     }
     
     func removePlan(at index: Int) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers:[studyPlans[index].id])
+        
         studyPlans.remove(at: index)
         savePlans()
     }
+    
+    func removePlanNotification(id: String) {
+        if let studyPlan = studyPlans.enumerated().first(where: {$0.element.id == id})? .offset {
+            studyPlans.remove(at: studyPlan)
+            savePlans()
+        }
+    }
+    
+    func setPlanDone(id: String) {
+        if let studyPlan = studyPlans.first(where: {$0.id == id}) {
+            studyPlan.done = true
+            savePlans()
+        }
+    }
+    
 }

@@ -30,7 +30,7 @@ class StudyPlanViewController: UIViewController {
         content.title = "Lembrete"
         content.subtitle = "Matéria: \(studyPlan.course)"
         content.body = "Estudar \(studyPlan.section)"
-        content.sound = UNNotificationSound(named: UNNotificationSoundName("notification.wav"))
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("send.wav"))
         content.categoryIdentifier = "Lembrete"
         
         let dateComponents = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute], from: dpDate.date)

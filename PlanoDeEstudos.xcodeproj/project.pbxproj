@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE7370BE2A4CE09400D2803B /* StudyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7370BD2A4CE09400D2803B /* StudyPlan.swift */; };
 		CE7370C02A4CE18500D2803B /* StudyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7370BF2A4CE18500D2803B /* StudyManager.swift */; };
-		CE7370C32A4CFE5300D2803B /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE7370C22A4CFE5300D2803B /* notification.wav */; };
 		CE7CC5D92A4CC05100AB6537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC5D82A4CC05100AB6537 /* AppDelegate.swift */; };
 		CE7CC5DB2A4CC05100AB6537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC5DA2A4CC05100AB6537 /* SceneDelegate.swift */; };
 		CE7CC5E02A4CC05100AB6537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7CC5DE2A4CC05100AB6537 /* Main.storyboard */; };
@@ -20,6 +19,7 @@
 		CE7CC5FC2A4CC05500AB6537 /* PlanoDeEstudosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC5FB2A4CC05500AB6537 /* PlanoDeEstudosUITestsLaunchTests.swift */; };
 		CE7CC6092A4CDC8200AB6537 /* StudyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC6082A4CDC8200AB6537 /* StudyPlanViewController.swift */; };
 		CE7CC60B2A4CDCAB00AB6537 /* StudyPalnsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC60A2A4CDCAB00AB6537 /* StudyPalnsTableViewController.swift */; };
+		CEBB25BD2AC1DE7600777B8A /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEBB25BC2AC1DE7600777B8A /* send.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 /* Begin PBXFileReference section */
 		CE7370BD2A4CE09400D2803B /* StudyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlan.swift; sourceTree = "<group>"; };
 		CE7370BF2A4CE18500D2803B /* StudyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyManager.swift; sourceTree = "<group>"; };
-		CE7370C22A4CFE5300D2803B /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = notification.wav; path = "../../../../../Downloads/CHATGPT - WILL ADICIONE ESSE ARQUIVO EM TODOS OS VIDEOS DO CHATGPT POIS É O ARQUIVO DO PROJETO INICIAL/CHATGPT/Utils/Sound/notification.wav"; sourceTree = "<group>"; };
 		CE7CC5D52A4CC05100AB6537 /* PlanoDeEstudos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanoDeEstudos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7CC5D82A4CC05100AB6537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7CC5DA2A4CC05100AB6537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		CE7CC5FB2A4CC05500AB6537 /* PlanoDeEstudosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanoDeEstudosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE7CC6082A4CDC8200AB6537 /* StudyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPlanViewController.swift; sourceTree = "<group>"; };
 		CE7CC60A2A4CDCAB00AB6537 /* StudyPalnsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPalnsTableViewController.swift; sourceTree = "<group>"; };
+		CEBB25BC2AC1DE7600777B8A /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		CE7370C12A4CFE4B00D2803B /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				CE7370C22A4CFE5300D2803B /* notification.wav */,
+				CEBB25BC2AC1DE7600777B8A /* send.wav */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			files = (
 				CE7CC5E52A4CC05400AB6537 /* LaunchScreen.storyboard in Resources */,
 				CE7CC5E22A4CC05400AB6537 /* Assets.xcassets in Resources */,
-				CE7370C32A4CFE5300D2803B /* notification.wav in Resources */,
+				CEBB25BD2AC1DE7600777B8A /* send.wav in Resources */,
 				CE7CC5E02A4CC05100AB6537 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
